@@ -1,0 +1,66 @@
+{
+  "name": "async-immer",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+  "async",
+  "immer",
+  "immutable",
+  "immutability",
+  "state",
+  "state-management",
+  "async-state",
+  "concurrency",
+  "race-condition",
+  "race-conditions",
+  "stale-state",
+  "stale-write",
+  "atomic-update",
+  "atomic",
+  "versioned-state",
+  "optimistic-update",
+  "consistency",
+  "transactional",
+  "react",
+  "redux",
+  "zustand",
+  "state-container"
+],
+"author": "cinfinit",
+"license": "MIT",
+"repository": {
+    "type": "git",
+    "url": "https://github.com/cinfinit/async-immer"
+  },
+  "bugs": {
+    "url": "https://github.com/cinfinit/async-immer/issues"
+  },
+  "homepage": "https://github.com/cinfinit/async-immer#readme",
+  "sideEffects": false,
+  "dependencies": {
+    "immer": "^11.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
