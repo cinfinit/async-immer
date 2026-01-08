@@ -108,6 +108,9 @@ The version is what **protects you from stale async commits**.
 An async-safe version of `produce`.
 
 ```ts
+
+import {StateContainer , asyncProduce ,immerEngine} from 'async-immer'
+
 await asyncProduce(
   container,
   async draft => {
@@ -128,6 +131,8 @@ await asyncProduce(
 ### Synchronous update
 
 ```ts
+import {StateContainer , asyncProduce ,immerEngine} from 'async-immer'
+
 await asyncProduce(container, draft => {
   draft.count += 1;
 }, immerEngine);
@@ -141,6 +146,8 @@ console.log(container.state);
 ### Asynchronous update
 
 ```ts
+import {StateContainer , asyncProduce ,immerEngine} from 'async-immer'
+
 await asyncProduce(container, async draft => {
   draft.user = await fetchUser();
   draft.permissions = await fetchPermissions();
@@ -168,6 +175,8 @@ If `fetchSlow` finishes last → **stale overwrite**.
 ### With `async-immer` ✅
 
 ```ts
+import {StateContainer , asyncProduce ,immerEngine} from 'async-immer'
+
 asyncProduce(container, async draft => {
   await delay(200);
   draft.value = "slow";
